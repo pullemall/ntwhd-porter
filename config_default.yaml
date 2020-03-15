@@ -1,0 +1,8 @@
+token: 12345:ABCDE
+loglevel: INFO
+captcha:
+  timeout: 60
+  msg_limit: 5
+db:
+  users: users.json
+  messages: messages.db
