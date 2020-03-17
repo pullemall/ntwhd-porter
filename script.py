@@ -17,11 +17,6 @@ MESSAGES = dict()
 # define bot
 bot = telebot.TeleBot(config["token"].get())
 
-for admin in bot.get_chat_administrators(config["chat"].get()):
-    ADMINS.append(admin.user.id)
-
-print(ADMINS)
-
 
 def kick_user(message, msg_from_bot):
     """
@@ -153,4 +148,15 @@ def get_user_messages(message):
         bot.reply_to(message, get_text(), parse_mode="html")
 
 
-bot.polling()
+if __name__ == "__main__":
+    for admin in bot.get_chat_administrators(config["chat"].get()):
+        ADMINS.append(admin.user.id)
+    try:
+        while True:
+            try:
+                bot.polling(none_stop=True, timeout=60)
+            except Exception as e:
+                bot.stop_polling()
+                time.sleep(10)
+    except (KeyboardInterrupt, SystemExit):
+        raise
