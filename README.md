@@ -4,7 +4,7 @@ Simple captcha bot which asks to define and enter symbols from picture. If user 
 ## Deployment process on Ubuntu
 #### Preparing virtualenv
 Clone repo into ```/home/your-username/``` path
-Create a virtual environment in ```ntwhd-porter``` directory
+. Create a virtual environment in ```ntwhd-porter``` directory
 ```
 cd ntwhd-porter
 virtualenv venv
@@ -33,7 +33,7 @@ And now you can check status of running process and make sure that your program 
 ```
 sudo supervisorctl status
 ```
-To stop or start the program user
+To stop or start the program
 ```
 sudo supervisorctl stop ntwhd-porter
 sudo supervisorctl start ntwhd-porter
