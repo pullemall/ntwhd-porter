@@ -1,5 +1,6 @@
 token: 12345:ABCDE
 loglevel: INFO
+chat: -1234567890
 captcha:
   timeout: 60
   msg_limit: 5
