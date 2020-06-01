@@ -1,5 +1,5 @@
 # ntwhd-porter
-Simple captcha bot which asks to define and enter symbols from picture. If user enter right symbols bot send message which set in hello_message.txt. Otherwise user will be kicked.
+Simple captcha bot which asks to define and enter symbols from the picture. If the user enters right symbols bot sends the message which set in hello_message.txt. Otherwise, the user will be kicked
 
 ## Deployment process on Ubuntu
 #### Preparing virtualenv
